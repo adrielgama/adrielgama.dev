@@ -23,40 +23,43 @@ export default function NavMenu() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true)
-      } else {
-        setIsScrolled(false)
+    if (typeof window !== 'undefined') {
+      const handleScroll = () => {
+        if (window.scrollY > 10) {
+          setIsScrolled(true)
+        } else {
+          setIsScrolled(false)
+        }
       }
-    }
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
+      window.addEventListener('scroll', handleScroll)
+      return () => window.removeEventListener('scroll', handleScroll)
+    }
   }, [])
 
   const navItems = [
     { name: 'Home', href: '#', id: '' },
     { name: 'Projects', href: '#projects', id: 'projects' },
     { name: 'About Me', href: '#about', id: 'about' },
-    // { name: 'Resume', href: '#resume', id: 'resume' },
     { name: 'Contact', href: '#contact', id: 'contact' },
   ]
 
   const handleSmoothScroll =
     (id: string) => (e: { preventDefault: () => void }) => {
       e.preventDefault()
-      if (id === '') {
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth',
-        })
-      } else {
-        const element = document.getElementById(id)
-        if (element) {
-          element.scrollIntoView({
+      if (typeof window !== 'undefined') {
+        if (id === '') {
+          window.scrollTo({
+            top: 0,
             behavior: 'smooth',
           })
+        } else {
+          const element = document.getElementById(id)
+          if (element) {
+            element.scrollIntoView({
+              behavior: 'smooth',
+            })
+          }
         }
       }
       setIsMobileMenuOpen(false)

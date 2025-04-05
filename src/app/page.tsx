@@ -1,11 +1,9 @@
-'use client'
-
 import AboutMe from '@/components/about-me'
 import Contact from '@/components/contact'
 import Footer from '@/components/footer'
 import NavMenu from '@/components/nav-menu'
-import ProjectsGallerySection from '@/components/projects-gallery'
 import ThreeDMarqueeComponent from '@/components/three-d-marquee-bg'
+import ProjectsGallerySection from '@/components/projects-gallery'
 
 export default function Home() {
   return (
