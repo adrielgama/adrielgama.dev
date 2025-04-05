@@ -20,7 +20,9 @@
 
 <div align="center">
 
-![Stargazers](https://img.shields.io/github/stars/adrielgama/adrielgama.dev?style=social) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<!-- ![Stargazers](https://img.shields.io/github/stars/adrielgama/adrielgama.dev?style=social)  -->
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 </div>
 
