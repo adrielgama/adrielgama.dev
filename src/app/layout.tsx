@@ -2,7 +2,6 @@ import { Analytics } from '@vercel/analytics/next'
 import { Inter } from 'next/font/google'
 
 import { ThemeProvider } from '@/components/theme-provider'
-import { Toaster } from '@/components/ui/sonner'
 
 import type { Metadata } from 'next'
 import './globals.css'
@@ -106,7 +105,6 @@ export default function RootLayout({
           {children}
           <Analytics />
         </ThemeProvider>
-        <Toaster richColors theme="light" />
       </body>
     </html>
   )
