@@ -1,6 +1,7 @@
 'use client'
 
 import dynamic from 'next/dynamic'
+
 import Footer from '@/components/footer'
 
 const NavMenu = dynamic(() => import('@/components/nav-menu'), { ssr: false })
