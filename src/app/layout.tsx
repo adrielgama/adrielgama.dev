@@ -1,10 +1,10 @@
-import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/next'
-
-import { Toaster } from '@/components/ui/sonner'
-import { ThemeProvider } from '@/components/theme-provider'
-
 import { Inter } from 'next/font/google'
+
+import { ThemeProvider } from '@/components/theme-provider'
+import { Toaster } from '@/components/ui/sonner'
+
+import type { Metadata } from 'next'
 import './globals.css'
 
 const inter = Inter({
@@ -34,7 +34,6 @@ export const metadata: Metadata = {
   authors: [{ name: 'Adriel Gama', url: 'https://x.com/adrielgama' }],
   creator: 'Adriel Gama',
   publisher: 'Adriel Gama',
-  colorScheme: 'light dark',
   metadataBase: new URL('https://adrielgama.dev'),
   manifest: '/favicon/site.webmanifest',
 

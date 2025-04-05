@@ -1,9 +1,7 @@
 'use client'
-import Link from 'next/link'
-import { ThreeDMarquee } from './ui/3d-marquee'
-import { Button } from './ui/button'
-import { Download } from 'lucide-react'
+
 import ResumeDownload from './resume-download'
+import { ThreeDMarquee } from './ui/3d-marquee'
 
 export function ThreeDMarqueeDemo() {
   const images = [
@@ -56,7 +54,7 @@ export function ThreeDMarqueeDemo() {
           Developer.
         </h2>
         <p className="relative mx-auto max-w-2xl pt-8 text-center text-sm text-neutral-600 md:text-base dark:text-neutral-200">
-          I'm a front-end developer with a passion for creating beautiful
+          I&apos;m a front-end developer with a passion for creating beautiful
           experiences.
         </p>
         <div className="pt-2">

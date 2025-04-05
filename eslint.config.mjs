@@ -14,10 +14,6 @@ const eslintConfig = [
     extends: ['prettier', 'next/typescript', 'next/core-web-vitals'],
     plugins: ['prettier'],
     rules: {
-      'import/no-unresolved': ['error', { commonjs: true, amd: true }],
-      'import/namespace': 'error',
-      'import/default': 'error',
-      'import/export': 'error',
       'react/display-name': 'off',
       '@typescript-eslint/no-empty-object-type': 'off',
       'import/order': [

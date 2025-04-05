@@ -1,5 +1,8 @@
-import Link from 'next/link'
 import { Download } from 'lucide-react'
+import Link from 'next/link'
+
+import { cn } from '@/lib/utils'
+
 import { Button } from './ui/button'
 import {
   DropdownMenu,
@@ -7,7 +10,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from './ui/dropdown-menu'
-import { cn } from '@/lib/utils'
 
 export default function ResumeDownload({
   isDarkMode,

@@ -1,9 +1,10 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+
+import { Menu } from 'lucide-react'
 import Link from 'next/link'
-import { Menu, X } from 'lucide-react'
-import { cn } from '@/lib/utils'
+
 import { Button } from '@/components/ui/button'
 import {
   Sheet,
@@ -12,6 +13,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from '@/components/ui/sheet'
+import { cn } from '@/lib/utils'
+
 import { ModeToggle } from './theme-toggle'
 import { VisuallyHidden } from './ui/visually-hidden'
 

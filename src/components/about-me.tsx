@@ -1,9 +1,11 @@
+import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-import { Badge } from '@/components/ui/badge'
-import { Download, ArrowRight } from 'lucide-react'
 import { FaXTwitter, FaGithub, FaLinkedin } from 'react-icons/fa6'
+
+import { Badge } from '@/components/ui/badge'
+import { Button } from '@/components/ui/button'
+
 import ResumeDownload from './resume-download'
 
 export default function AboutMe() {
@@ -60,7 +62,7 @@ export default function AboutMe() {
                 About Me
               </Badge>
               <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">
-                Hi, I'm{' '}
+                Hi, I&apos;m{' '}
                 <span className="text-blue-500 dark:text-blue-400">
                   Adriel Gama
                 </span>
@@ -69,12 +71,12 @@ export default function AboutMe() {
               <p className="mb-6 text-lg text-slate-600 dark:text-slate-400">
                 I specialize in building responsive, user-friendly web
                 applications with modern JavaScript frameworks. With 5+ years of
-                experience, I've worked on projects ranging from small business
-                websites to complex enterprise applications.
+                experience, I&apos;ve worked on projects ranging from small
+                business websites to complex enterprise applications.
               </p>
               <p className="text-lg text-slate-600 dark:text-slate-400">
-                When I'm not coding, you can find me hiking in video games or
-                experimenting with new recipes.
+                When I&apos;m not coding, you can find me hiking in video games
+                or experimenting with new recipes.
               </p>
             </div>
 

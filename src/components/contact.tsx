@@ -1,31 +1,20 @@
 'use client'
 
 import Lottie from 'lottie-react'
-import contactAnimation from '../../public/contact-animation.json'
-
-import { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
 import { Mail, MapPin, Phone, ExternalLink } from 'lucide-react'
+import Link from 'next/link'
 import {
   FaXTwitter as Twitter,
   FaGithub as Github,
   FaLinkedin as Linkedin,
 } from 'react-icons/fa6'
 
+import { Button } from '@/components/ui/button'
+import { Card, CardContent } from '@/components/ui/card'
+
+import contactAnimation from '../../public/contact-animation.json'
+
 export default function Contact() {
-  const [mapLoaded, setMapLoaded] = useState(false)
-
-  // Simulate map loading
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setMapLoaded(true)
-    }, 1000)
-
-    return () => clearTimeout(timer)
-  }, [])
-
   return (
     <section id="contact" className="py-24">
       <div className="container px-4 md:px-6">
@@ -37,8 +26,8 @@ export default function Contact() {
               </h2>
               <div className="mb-6 h-1 w-20 bg-cyan-500"></div>
               <p className="max-w-md text-lg text-slate-600 dark:text-slate-400">
-                I'm always open to discussing new projects, creative ideas or
-                opportunities to be part of your vision.
+                I&apos;m always open to discussing new projects, creative ideas
+                or opportunities to be part of your vision.
               </p>
             </div>
 
