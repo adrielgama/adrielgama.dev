@@ -1,68 +1,33 @@
-# **Next 15 Template 🚀**
+<br/>
+<p align="center">
+  <a href="https://github.com/adrielgama/adrielgama.dev">
+    <img src="/public/favicon/apple-touch-icon.png" alt="Logo" width="80" height="80" />
+  </a>
 
-This repository serves as a **template** for new projects using the following technologies:
+  <h3 align="center">Adriel Gama - Portfolio 2025</h3>
 
-- **Next.js 15**
-- **Tailwind CSS v4**
-- **ShadCN Canary**
-- **ESLint**
-- **Tailwind CSS ESLint**
+  <p align="center">
+    Project developed with Next 15 + Typescript + Tailwind CSS
+    <br/>
+    <br/>
+    <br/>
+    <a href="https://adrielgama.dev">View site</a>
+    |
+    <a href="https://github.com/adrielgama/adrielgama.dev/issues">Report Bug</a>
+    
+  </p>
+</p>
 
-## 📦 **Tech Stack & Dependencies**
+<div align="center">
 
-### **Core Dependencies**
+![Stargazers](https://img.shields.io/github/stars/adrielgama/adrielgama.dev?style=social) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-- `next@15.1.7` – React framework
-- `react@19.0.0` – React library
-- `react-dom@19.0.0` – React rendering
-- `tailwindcss@4.0.7` – CSS framework
-- `lucide-react@0.475.0` – Icon set
-- `sonner@2.0.0` – Notifications
-- `next-themes@0.4.4` – Theme management
-- `class-variance-authority@0.7.1` – CSS class management
-- `clsx@2.1.1` – Utility for conditionally joining class names
-- `tailwind-merge@3.0.1` – Tailwind class merging
-- `tailwindcss-animate@1.0.7` – Tailwind animation utilities
+</div>
 
-### **Development & Configuration**
+## About The Project
 
-- `eslint@9.20.1` – Linter
-- `prettier@3.5.1` + `prettier-plugin-tailwindcss@0.6.11` – Code formatting
-- `typescript@5` – TypeScript support
-- `postcss@8.5.2` + `autoprefixer@10.4.20` – CSS processing
-- `@tailwindcss/typography@0.5.16` – Typography styles
-- `@tailwindcss/postcss@4.0.7` – Tailwind/PostCSS integration
+This project was developed using **Next 15**, **TypeScript**, and **Tailwind CSS**. With future improvements in mind, such as implementing a blog posting system, Next was chosen due to its streamlined routing capabilities, which facilitate scalability and maintenance.
 
-## 🚀 **Getting Started**
+## License
 
-1. **Clone the repository:**
-
-   ```sh
-   git clone https://github.com/adrielgama/next15-template.git
-   cd next15-template
-   ```
-
-2. **Install dependencies:**
-
-   ```sh
-   npm install
-   # or
-   yarn install
-   # or
-   pnpm install
-   ```
-
-3. **Run the development server:**
-
-   ```sh
-   npm run dev
-   ```
-
-4. **Access the project at:**
-   ```
-   http://localhost:3000
-   ```
-
-## 📌 **Purpose**
-
-This template is designed to streamline the creation of new projects using **Next.js 15** with **Tailwind CSS v4**, pre-configured with **ShadCN Canary**, **ESLint**, and other essential tools.
+Distributed under the MIT License. See [LICENSE](https://github.com/adrielgama/adrielgama.dev/blob/main/LICENCE.md) for more information.

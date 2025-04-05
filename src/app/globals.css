@@ -5,6 +5,10 @@
 
 @custom-variant dark (&:is(.dark *));
 
+* {
+  scroll-behavior: smooth;
+}
+
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
 }
@@ -22,13 +26,13 @@
 
 /* Estiliza o fundo da barra */
 ::-webkit-scrollbar-track {
-  background: var(--color-gray-6);
+  background: #f1f1f1;
   border-radius: 10px;
 }
 
 /* Estiliza o "thumb" da barra (a parte que desliza) */
 ::-webkit-scrollbar-thumb {
-  background-color: var(--color-blue-2);
+  background-color: #299ffa;
   border-radius: 10px;
 }
 

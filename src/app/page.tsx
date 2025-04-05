@@ -1,7 +1,39 @@
+import AboutMe from '@/components/about-me'
+import Contact from '@/components/contact'
+import Footer from '@/components/footer'
+import NavMenu from '@/components/nav-menu'
+import ProjectsGallerySection from '@/components/projects-gallery'
+import { ThreeDMarqueeDemo } from '@/components/three-d-marquee-bg'
+
 export default function Home() {
   return (
-    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
-      <h1>Hello world</h1>
+    <div>
+      <main className="min-h-screen">
+        <NavMenu />
+        <section className="from-background to-muted mt-28 flex h-auto items-center justify-center bg-gradient-to-b">
+          <ThreeDMarqueeDemo />
+        </section>
+
+        <section className="bg-muted/50 flex min-h-screen items-center justify-center">
+          <div className="container mx-auto md:py-8">
+            <ProjectsGallerySection />
+          </div>
+        </section>
+
+        <section className="bg-muted/50 flex items-center justify-center">
+          <div className="container mx-auto px-4 py-8">
+            <AboutMe />
+          </div>
+        </section>
+
+        <section className="bg-muted/50 flex items-center justify-center">
+          <div className="container mx-auto px-4 pt-8">
+            <Contact />
+          </div>
+        </section>
+      </main>
+
+      <Footer />
     </div>
   )
 }
