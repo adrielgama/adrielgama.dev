@@ -1,9 +1,11 @@
+'use client'
+
 import AboutMe from '@/components/about-me'
 import Contact from '@/components/contact'
 import Footer from '@/components/footer'
 import NavMenu from '@/components/nav-menu'
 import ProjectsGallerySection from '@/components/projects-gallery'
-import { ThreeDMarqueeDemo } from '@/components/three-d-marquee-bg'
+import ThreeDMarqueeComponent from '@/components/three-d-marquee-bg'
 
 export default function Home() {
   return (
@@ -11,7 +13,7 @@ export default function Home() {
       <main className="min-h-screen">
         <NavMenu />
         <section className="from-background to-muted mt-28 flex h-auto items-center justify-center bg-gradient-to-b">
-          <ThreeDMarqueeDemo />
+          <ThreeDMarqueeComponent />
         </section>
 
         <section className="bg-muted/50 flex min-h-screen items-center justify-center">

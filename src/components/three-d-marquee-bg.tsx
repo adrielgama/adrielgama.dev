@@ -3,7 +3,7 @@
 import ResumeDownload from './resume-download'
 import { ThreeDMarquee } from './ui/3d-marquee'
 
-export function ThreeDMarqueeDemo() {
+export default function ThreeDMarqueeComponent() {
   const images = [
     '/hero/fapp-old-ui-kit.webp',
     '/hero/image-converter.webp',
