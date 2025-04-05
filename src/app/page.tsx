@@ -1,11 +1,19 @@
 'use client'
 
-import AboutMe from '@/components/about-me'
-import Contact from '@/components/contact'
+import dynamic from 'next/dynamic'
 import Footer from '@/components/footer'
-import NavMenu from '@/components/nav-menu'
-import ProjectsGallerySection from '@/components/projects-gallery'
-import ThreeDMarqueeComponent from '@/components/three-d-marquee-bg'
+
+const NavMenu = dynamic(() => import('@/components/nav-menu'), { ssr: false })
+const AboutMe = dynamic(() => import('@/components/about-me'), { ssr: false })
+const Contact = dynamic(() => import('@/components/contact'), { ssr: false })
+const ProjectsGallerySection = dynamic(
+  () => import('@/components/projects-gallery'),
+  { ssr: false }
+)
+const ThreeDMarqueeComponent = dynamic(
+  () => import('@/components/three-d-marquee-bg'),
+  { ssr: false }
+)
 
 export default function Home() {
   return (
