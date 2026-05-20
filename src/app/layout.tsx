@@ -20,7 +20,12 @@ export const metadata: Metadata = {
     type: "website",
   },
   robots: { index: true, follow: true },
-  twitter: { title: DATA.name, card: "summary_large_image" },
+  twitter: {
+    title: DATA.name,
+    description: DATA.description,
+    card: "summary_large_image",
+    creator: "@adrielgama",
+  },
 };
 
 export default function RootLayout({

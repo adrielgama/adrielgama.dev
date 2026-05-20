@@ -14,7 +14,7 @@ function Side({ align }: { align: "left" | "right" }) {
 
   return (
     <div
-      className={`pointer-events-none fixed top-0 h-full w-[26vw] flex flex-col gap-5 p-4 ${align === "left" ? "left-0" : "right-0"}`}
+      className={`pointer-events-none fixed top-0 h-full w-[26vw] opacity-30 lg:opacity-100 flex flex-col gap-5 p-4 ${align === "left" ? "left-0" : "right-0"}`}
     >
       <BentoBox size="sm" align={inward} />
       <MiniRow align={inward} />
