@@ -307,4 +307,19 @@ export const DATA = {
     win?: string;
     links: { title: string; href: string }[];
   }[],
+  keywords: [
+    "Adriel Gama",
+    "desenvolvedor front-end",
+    "web responsiva",
+    "interfaces interativas",
+    "experiência do usuário",
+    "otimização de desempenho",
+    "Next.js",
+    "React",
+    "TypeScript",
+    "UI/UX",
+    "desenvolvimento web",
+    "cross-browser",
+    "soluções inovadoras",
+  ],
 };
