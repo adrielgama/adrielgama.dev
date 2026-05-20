@@ -111,7 +111,7 @@ export const DATA = {
     },
     {
       company: "Beta Sistemas",
-      href: "",
+      href: "https://betasistemas.com",
       badges: ["Part-time"] as string[],
       location: "Remoto",
       title: "Desenvolvedor Front-end",
@@ -123,7 +123,7 @@ export const DATA = {
     },
     {
       company: "Grupo Ramiro Campelo",
-      href: "",
+      href: "https://www.linkedin.com/company/grupo-ramiro-campelo-com-rcio-de-utilidades-ltda/",
       badges: [] as string[],
       location: "Salvador, BA",
       title: "Assistente de Projetos de TI",
