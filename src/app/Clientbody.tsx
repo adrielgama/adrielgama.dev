@@ -51,18 +51,7 @@ function Banner({
       className="relative w-full overflow-hidden bg-black"
       style={{ aspectRatio: "2560 / 423" }}
     >
-      {video ? (
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          poster={src}
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        >
-          <source src={video} type="video/webm" />
-        </video>
-      ) : src ? (
+      {src && (
         <Image
           unoptimized
           src={src}
@@ -71,7 +60,19 @@ function Banner({
           className="object-cover object-center"
           priority
         />
-      ) : null}
+      )}
+      {video && (
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          poster={src}
+          className="absolute inset-0 hidden md:block w-full h-full object-cover object-center"
+        >
+          <source src={video} type="video/webm" />
+        </video>
+      )}
       {children}
     </div>
   );
