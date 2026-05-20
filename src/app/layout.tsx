@@ -1,6 +1,5 @@
 import { DATA } from "@/data/resume";
 import type { Metadata } from "next";
-import Script from "next/script";
 import ClientBody from "./Clientbody";
 import "./globals.css";
 
@@ -38,12 +37,6 @@ export default function RootLayout({
     <html lang="pt-BR" suppressHydrationWarning>
       <body className="min-h-screen bg-background antialiased">
         <ClientBody>{children}</ClientBody>
-        <Script
-          defer
-          src="https://static.cloudflareinsights.com/beacon.min.js"
-          data-cf-beacon='{"token": "a88d566dc656485da180035ad7b74db1"}'
-          strategy="afterInteractive"
-        />
       </body>
     </html>
   );
