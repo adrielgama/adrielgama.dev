@@ -27,7 +27,11 @@ export function Navbar() {
       }`}
     >
       <div className="flex items-center justify-between px-5 sm:px-8 h-12">
-        <a href="#" className="flex items-center gap-2 group">
+        <a
+          href="#"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 group"
+        >
           <span className="w-6 h-6 rounded bg-foreground text-background text-[10px] font-bold flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
             {DATA.initials}
           </span>
