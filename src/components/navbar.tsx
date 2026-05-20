@@ -52,10 +52,10 @@ export function Navbar() {
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                title={name}
+                aria-label={social.name}
                 className="w-8 h-8 flex items-center justify-center text-muted-foreground hover:text-foreground transition-colors rounded-md hover:bg-accent"
               >
-                <Icon className="w-3.5 h-3.5" />
+                <Icon className="w-3.5 h-3.5" aria-hidden="true" />
               </a>
             );
           })}

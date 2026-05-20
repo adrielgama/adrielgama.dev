@@ -25,7 +25,7 @@ export default function ClientBody({
 
           <div className="relative max-w-5xl select-none mx-auto">
             <Navbar />
-            <Banner src="/banner.gif" />
+            <Banner video="/banner.webm" src="/banner.gif" />
             <div className="max-w-5xl mx-auto border-x border-border min-h-screen">
               {children}
             </div>
@@ -51,7 +51,18 @@ function Banner({
       className="relative w-full overflow-hidden bg-black"
       style={{ aspectRatio: "2560 / 423" }}
     >
-      {src && (
+      {video ? (
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        >
+          <source src={video} type="video/webm" />
+          {src && <source src={src} type="image/gif" />}
+        </video>
+      ) : src ? (
         <Image
           unoptimized
           src={src}
@@ -60,17 +71,7 @@ function Banner({
           className="object-cover object-center"
           priority
         />
-      )}
-      {video && (
-        <video
-          src={video}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
-      )}
+      ) : null}
       {children}
     </div>
   );

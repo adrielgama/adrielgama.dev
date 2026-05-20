@@ -17,6 +17,7 @@ export function ModeToggle({ className }: { className?: string }) {
       <TooltipTrigger asChild>
         <button
           onClick={(e) => toggleTheme(e.clientX, e.clientY)}
+          aria-label="Alternar tema"
           className={cn(
             "relative flex items-center justify-center w-8 h-8 rounded-lg border border-border text-muted-foreground hover:text-foreground hover:bg-accent transition-all",
             className,

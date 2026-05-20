@@ -56,6 +56,7 @@ export function SoundToggle({ className }: { className?: string }) {
       <TooltipTrigger asChild>
         <button
           onClick={toggle}
+          aria-label={muted ? "Ativar som" : "Desativar som"}
           className={`relative flex items-center justify-center w-8 h-8 rounded-lg border border-border text-muted-foreground hover:text-foreground hover:bg-accent transition-all ${className ?? ""}`}
         >
           <Volume2
