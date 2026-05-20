@@ -57,10 +57,10 @@ function Banner({
           loop
           muted
           playsInline
+          poster={src}
           className="absolute inset-0 w-full h-full object-cover object-center"
         >
           <source src={video} type="video/webm" />
-          {src && <source src={src} type="image/gif" />}
         </video>
       ) : src ? (
         <Image

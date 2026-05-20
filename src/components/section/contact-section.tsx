@@ -24,6 +24,7 @@ export default function ContactSection() {
               <Link
                 href={`mailto:${DATA.contact.email}`}
                 className="group inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-foreground text-background text-sm font-semibold hover:bg-foreground/85 transition-colors"
+                aria-label="send-mail"
               >
                 Enviar e-mail
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -33,6 +34,7 @@ export default function ContactSection() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-border text-sm font-medium text-foreground hover:bg-accent hover:border-foreground/20 transition-colors"
+                aria-label="whatsapp"
               >
                 WhatsApp
               </Link>
@@ -64,6 +66,7 @@ export default function ContactSection() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group flex items-center justify-between py-3 border-b border-border/50 hover:border-foreground/20 transition-colors"
+                      aria-label={name}
                     >
                       <div className="flex items-center gap-3">
                         <div className="w-7 h-7 rounded-lg border border-border bg-muted flex items-center justify-center text-muted-foreground group-hover:text-foreground transition-colors">

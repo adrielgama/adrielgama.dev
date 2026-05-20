@@ -72,6 +72,7 @@ function ProjectCard({
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
+                aria-label={`acess-${l.type}`}
               >
                 <span className="flex items-center gap-1 text-[10px] font-mono px-2 py-1 rounded-lg bg-background/92 backdrop-blur-sm border border-border text-foreground shadow-sm">
                   <ArrowUpRight className="w-2.5 h-2.5" />
@@ -101,6 +102,7 @@ function ProjectCard({
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors flex-none mt-0.5"
               onClick={(e) => e.stopPropagation()}
+              aria-label="acess-project"
             >
               <ArrowUpRight className="w-3.5 h-3.5" />
             </Link>

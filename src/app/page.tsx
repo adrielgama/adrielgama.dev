@@ -178,7 +178,10 @@ export default function Page() {
                           </div>
 
                           {item.href && (
-                            <ArrowUpRight className="size-3 ml-auto opacity-0 group-hover:opacity-50 transition-opacity shrink-0" />
+                            <ArrowUpRight
+                              className="size-3 ml-auto opacity-0 group-hover:opacity-50 transition-opacity shrink-0"
+                              aria-label="acess"
+                            />
                           )}
                         </div>
                       );
