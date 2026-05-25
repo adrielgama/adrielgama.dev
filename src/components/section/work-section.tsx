@@ -2,6 +2,10 @@ import { DATA } from "@/data/resume";
 import Image from "next/image";
 import { FadeIn, Stagger, StaggerItem } from "@/components/fade-in";
 
+function getFaviconUrl(siteUrl: string, size = 16) {
+  return `https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=${encodeURIComponent(siteUrl)}&size=${size}`;
+}
+
 export default function WorkSection() {
   return (
     <div className="p-8 sm:p-12">
@@ -24,20 +28,24 @@ export default function WorkSection() {
                 <span className="text-[10px] font-mono tabular-nums text-muted-foreground/30">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <div className="size-10 p-1 rounded-lg overflow-hidden border border-border bg-white flex items-center justify-center flex-none">
-                  {job.logoUrl ? (
-                    <Image
-                      src={job.logoUrl}
-                      alt={job.company}
-                      width={40}
-                      height={40}
-                      className="w-full h-full object-cover object-left"
-                    />
-                  ) : (
-                    <span className="text-[10px] font-bold text-muted-foreground">
-                      {job.company[0]}
-                    </span>
-                  )}
+                <div className="relative size-11 rounded-sm overflow-hidden flex-none">
+                  <div
+                    className="absolute inset-0 blur-lg scale-150 bg-center bg-no-repeat bg-size-[200%]"
+                    style={{
+                      backgroundImage: `url(${getFaviconUrl(job.href, 32)})`,
+                    }}
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="size-8 rounded-[3px] bg-white flex items-center justify-center shadow-sm">
+                      <Image
+                        src={getFaviconUrl(job.href)}
+                        alt={job.company}
+                        width={16}
+                        height={16}
+                        className="size-4 object-contain rounded-sm"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
 

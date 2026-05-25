@@ -1,10 +1,12 @@
 import type { NextConfig } from "next";
 
+const isDev = process.env.NODE_ENV === "development";
+
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com;
+  script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://static.cloudflareinsights.com;
   style-src 'self' 'unsafe-inline';
-  img-src 'self' data: blob: https://images.unsplash.com;
+  img-src 'self' data: blob: https://images.unsplash.com https://*.gstatic.com;
   media-src 'self';
   font-src 'self';
   connect-src 'self' https://cloudflareinsights.com;
@@ -21,6 +23,10 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "*.gstatic.com",
       },
     ],
   },

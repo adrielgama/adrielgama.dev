@@ -99,7 +99,7 @@ export const DATA = {
     },
     {
       company: "EVOB",
-      href: "https://www.evob.com.br",
+      href: "https://evob.com.br",
       badges: ["Consultoria"] as string[],
       location: "Remoto",
       title: "Desenvolvedor Front-end",
@@ -123,7 +123,8 @@ export const DATA = {
     },
     {
       company: "Grupo Ramiro Campelo",
-      href: "https://www.linkedin.com/company/grupo-ramiro-campelo-com-rcio-de-utilidades-ltda/",
+      href: "https://www.lojasguaibim.com.br",
+      // href: "https://www.linkedin.com/company/grupo-ramiro-campelo-com-rcio-de-utilidades-ltda/",
       badges: [] as string[],
       location: "Salvador, BA",
       title: "Assistente de Projetos de TI",
@@ -135,7 +136,7 @@ export const DATA = {
     },
     {
       company: "COREN-BA",
-      href: "https://www.corenba.gov.br",
+      href: "https://www.coren-ba.gov.br",
       badges: [] as string[],
       location: "Salvador, BA",
       title: "Estagiário de Suporte de TI",
