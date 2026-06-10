@@ -33,7 +33,7 @@ export const DATA = {
     "Desenvolvedor Front-end & Construtor de Produtos. Especialista em React, Next.js e TypeScript, com foco em performance, escalabilidade e impacto direto no negócio.",
   summary:
     "Desenvolvedor Front-end com mais de 5 anos de experiência em plataformas SaaS, e-commerce, ed-tech e sistemas web de alta performance. Responsável por resultados como +166% no GMV e +278% na receita transacionada em produção. Atuo com React, Next.js, TypeScript e arquitetura escalável de interfaces responsivas, em squads ágeis com cultura DevOps. Busco desafios técnicos em empresas orientadas a produto digital, escalabilidade e impacto real.",
-  avatarUrl: "/adrielgama.jpg",
+  avatarUrl: "/adrielgama.webp",
   skills: [
     { name: "AWS", icon: AWS },
     { name: "Azure DevOps", icon: AzureDevops },

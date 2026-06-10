@@ -117,6 +117,8 @@ function BannerAnimation() {
   const isDark = resolvedTheme !== "light";
 
   useEffect(() => {
+    if (window.matchMedia("(max-width: 639px)").matches) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext("2d");
@@ -127,16 +129,14 @@ function BannerAnimation() {
       animId = 0,
       t = 0;
 
-    const resize = () => {
-      w = canvas.offsetWidth;
-      h = canvas.offsetHeight;
+    const ro = new ResizeObserver((entries) => {
+      const { width, height } = entries[0].contentRect;
+      w = width;
+      h = height;
       canvas.width = w * devicePixelRatio;
       canvas.height = h * devicePixelRatio;
       ctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
-    };
-
-    resize();
-    const ro = new ResizeObserver(resize);
+    });
     ro.observe(canvas);
 
     const draw = () => {

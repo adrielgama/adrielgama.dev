@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { X } from "lucide-react";
 import Image from "next/image";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { createPortal } from "react-dom";
 import { useModal } from "@/hooks/use-modal";
 import {
@@ -45,13 +44,18 @@ export function AvatarModal({ src, alt, fallback }: AvatarModalProps) {
           <motion.div
             layoutId="avatar-image"
             onClick={open}
-            className="cursor-zoom-in"
+            className="cursor-zoom-in size-16 sm:size-20 md:size-24 rounded-full overflow-hidden border shadow-lg ring-4 ring-muted shrink-0"
             style={{ borderRadius: "9999px" }}
           >
-            <Avatar className="size-16 sm:size-20 md:size-24 border rounded-full shadow-lg ring-4 ring-muted shrink-0">
-              <AvatarImage alt={alt} src={src} />
-              <AvatarFallback>{fallback}</AvatarFallback>
-            </Avatar>
+            <Image
+              src={src}
+              alt={alt}
+              width={96}
+              height={96}
+              className="h-full w-full object-cover"
+              sizes="(max-width: 640px) 64px, (max-width: 768px) 80px, 96px"
+              priority
+            />
           </motion.div>
         </TooltipTrigger>
 
