@@ -193,7 +193,7 @@ export const DATA = {
     {
       title: "SVG to TSX Converter",
       href: "https://svgtotsx.adrielgama.dev",
-      dates: "2026",
+      dates: "2026 – Presente",
       active: true,
       description:
         "Ferramenta de conversão de código SVG para componentes React em TypeScript. Permite personalização de propriedades como cor, tamanho e viewBox, facilitando a integração de ícones e gráficos vetoriais em projetos React.",
