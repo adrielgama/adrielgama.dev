@@ -50,10 +50,11 @@ export function AvatarModal({ src, alt, fallback }: AvatarModalProps) {
             <Image
               src={src}
               alt={alt}
-              width={96}
-              height={96}
+              width={400}
+              height={400}
               className="h-full w-full object-cover"
-              sizes="(max-width: 640px) 64px, (max-width: 768px) 80px, 96px"
+              sizes="(max-width: 640px) 192px, (max-width: 768px) 240px, 288px"
+              quality={100}
               priority
             />
           </motion.div>
@@ -100,10 +101,12 @@ export function AvatarModal({ src, alt, fallback }: AvatarModalProps) {
                     <Image
                       src={src}
                       alt={alt}
-                      width={384}
-                      height={384}
+                      width={400}
+                      height={400}
                       className="size-72 sm:size-80 md:size-96 object-cover shadow-2xl"
                       style={{ borderRadius: "16px" }}
+                      sizes="(max-width: 640px) 288px, (max-width: 768px) 320px, 384px"
+                      quality={100}
                       priority
                     />
 
