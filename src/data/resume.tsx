@@ -160,7 +160,7 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Agenda AGM",
+      title: "Agenda - By AGM Digital",
       href: "https://agenda.agmdigital.app",
       dates: "2026 – Presente",
       active: true,
@@ -175,9 +175,12 @@ export const DATA = {
         "Redis",
         "Docker",
         "NestJS",
-        "Pagar.me",
+        "Mercado Pago (Split Payments)",
         "Jest",
         "Cloud Flare",
+        "BullMQ",
+        "Resend",
+        "Supabase",
         "Motion",
         "Recharts",
         "Railway",
