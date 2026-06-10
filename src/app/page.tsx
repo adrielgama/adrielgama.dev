@@ -64,11 +64,23 @@ function LocalTime() {
   );
 }
 
+const phoneDisplay = "(71) 99655-9476";
+const whatsappHref = "https://wa.me/5571996559476";
+
 const detailItems = [
   {
     icon: Code2,
     label: "role",
     value: `${DATA.work[0].title} @${DATA.work[0].company}`,
+    href: DATA.work[0].href,
+    valueNode: (
+      <span className="flex flex-col">
+        <span>{DATA.work[0].title}</span>
+        <span className="text-muted-foreground font-normal">
+          @{DATA.work[0].company}
+        </span>
+      </span>
+    ),
   },
   {
     icon: Clock,
@@ -95,9 +107,16 @@ const detailItems = [
   {
     icon: Phone,
     label: "Telefone",
-    value: DATA.contact.tel,
-    href: `tel:${DATA.contact.tel}`,
+    value: phoneDisplay,
+    href: whatsappHref,
   },
+];
+
+const mobileDetailItems = [
+  detailItems[0],
+  detailItems[2],
+  detailItems[4],
+  detailItems[5],
 ];
 
 export default function Page() {
@@ -156,27 +175,24 @@ export default function Page() {
                 </div>
 
                 <div className="border border-border rounded-xl overflow-hidden mt-3">
-                  <div className="grid grid-cols-2">
-                    {detailItems.map((item, i) => {
+                  {/* mobile: 1 col, 4 items */}
+                  <div className="grid grid-cols-1 sm:hidden">
+                    {mobileDetailItems.map((item, i) => {
                       const Icon = item.icon;
-                      const isLastRow = i >= detailItems.length - 2;
-                      const isLeftCol = i % 2 === 0;
-
+                      const isLast = i === mobileDetailItems.length - 1;
                       const inner = (
                         <div className="flex items-center gap-3 px-4 py-3 group">
                           <div className="size-7 rounded-lg border border-border flex items-center justify-center shrink-0">
                             <Icon className="size-3.5 text-muted-foreground" />
                           </div>
-
                           <div className="min-w-0">
                             <p className="text-[10px] text-muted-foreground uppercase tracking-wider leading-none mb-0.5">
                               {item.label}
                             </p>
-                            <p className="text-sm font-medium text-foreground truncate">
+                            <p className="text-sm font-medium text-foreground wrap-break-word">
                               {item.valueNode ?? item.value}
                             </p>
                           </div>
-
                           {item.href && (
                             <ArrowUpRight
                               className="size-3 ml-auto opacity-0 group-hover:opacity-50 transition-opacity shrink-0"
@@ -185,7 +201,63 @@ export default function Page() {
                           )}
                         </div>
                       );
+                      return (
+                        <div
+                          key={item.label}
+                          className={!isLast ? "border-b border-border" : ""}
+                        >
+                          {item.href ? (
+                            <Link
+                              href={item.href}
+                              target={
+                                item.href.startsWith("http")
+                                  ? "_blank"
+                                  : undefined
+                              }
+                              rel={
+                                item.href.startsWith("http")
+                                  ? "noopener noreferrer"
+                                  : undefined
+                              }
+                              className="block hover:bg-muted/50 transition-colors"
+                            >
+                              {inner}
+                            </Link>
+                          ) : (
+                            <div>{inner}</div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
 
+                  {/* desktop: 2 cols, 6 items */}
+                  <div className="hidden sm:grid grid-cols-2">
+                    {detailItems.map((item, i) => {
+                      const Icon = item.icon;
+                      const isLastRow = i >= detailItems.length - 2;
+                      const isLeftCol = i % 2 === 0;
+                      const inner = (
+                        <div className="flex items-center gap-3 px-4 py-3 group">
+                          <div className="size-7 rounded-lg border border-border flex items-center justify-center shrink-0">
+                            <Icon className="size-3.5 text-muted-foreground" />
+                          </div>
+                          <div className="min-w-0">
+                            <p className="text-[10px] text-muted-foreground uppercase tracking-wider leading-none mb-0.5">
+                              {item.label}
+                            </p>
+                            <p className="text-sm font-medium text-foreground wrap-break-word">
+                              {item.valueNode ?? item.value}
+                            </p>
+                          </div>
+                          {item.href && (
+                            <ArrowUpRight
+                              className="size-3 ml-auto opacity-0 group-hover:opacity-50 transition-opacity shrink-0"
+                              aria-label="acess"
+                            />
+                          )}
+                        </div>
+                      );
                       return (
                         <div
                           key={item.label}
@@ -345,7 +417,9 @@ export default function Page() {
               {DATA.skills.map((skill) => (
                 <StaggerItem key={skill.name}>
                   <div className="border bg-background border-border rounded-xl h-8 px-4 flex items-center gap-2">
-                    {skill.icon && <skill.icon className="size-4" />}
+                    {skill.icon && (
+                      <skill.icon className="size-4" aria-label={skill.name} />
+                    )}
                     <span className="text-sm font-medium whitespace-nowrap">
                       {skill.name}
                     </span>

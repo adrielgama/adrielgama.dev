@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     type: "website",
   },
+  alternates: { canonical: DATA.url },
   robots: { index: true, follow: true },
   twitter: {
     title: DATA.name,
