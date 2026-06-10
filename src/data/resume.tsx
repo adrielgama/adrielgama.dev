@@ -191,6 +191,32 @@ export const DATA = {
       video: "",
     },
     {
+      title: "SVG to TSX Converter",
+      href: "https://svgtotsx.adrielgama.dev",
+      dates: "2026",
+      active: true,
+      description:
+        "Ferramenta de conversão de código SVG para componentes React em TypeScript. Permite personalização de propriedades como cor, tamanho e viewBox, facilitando a integração de ícones e gráficos vetoriais em projetos React.",
+      technologies: [
+        "React",
+        "TypeScript",
+        "TailwindCSS",
+        "Vite",
+        "Vercel",
+        "OpenAI",
+        "Claude AI",
+      ],
+      links: [
+        { type: "Website", href: "https://svgtotsx.adrielgama.dev" },
+        {
+          type: "Source",
+          href: "https://github.com/adrielgama/svg-to-typescript",
+        },
+      ],
+      image: "/projects/svgtotsx.webp",
+      video: "",
+    },
+    {
       title: "Tapetes & Tal",
       href: "https://www.tapetesetal.com.br",
       dates: "2017 – Presente",
